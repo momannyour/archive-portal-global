@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>爱游戏 · 资料整理笔记</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #fbfbfb;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+      color: #1e1e1e;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    /* hero 横幅 */
+    .hero {
+      padding: 4rem 0 2.5rem;
+      border-bottom: 1px solid #eaeaea;
+      margin-bottom: 3rem;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 450;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.75rem;
+      color: #111;
+    }
+
+    .hero .sub {
+      font-size: 1.05rem;
+      color: #5a5a5a;
+      max-width: 540px;
+    }
+
+    /* 背景说明卡片 */
+    .background-card {
+      background: #ffffff;
+      border: 1px solid #ececec;
+      border-radius: 20px;
+      padding: 2rem 2.2rem;
+      margin-bottom: 3.2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+    }
+
+    .background-card h2 {
+      font-size: 1.5rem;
+      font-weight: 450;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+      color: #1e1e1e;
+    }
+
+    .background-card p {
+      margin-bottom: 1.1rem;
+    }
+
+    .background-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* 三段自然介绍 */
+    .section-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .info-item {
+      border-left: 2px solid #d4d4d4;
+      padding-left: 1.5rem;
+    }
+
+    .info-item h3 {
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      color: #222;
+    }
+
+    .info-item p {
+      color: #3a3a3a;
+      margin-bottom: 0.3rem;
+    }
+
+    .info-item .meta {
+      font-size: 0.85rem;
+      color: #8a8a8a;
+      margin-top: 0.5rem;
+    }
+
+    /* FAQ 摘要 */
+    .faq-summary {
+      background: #f5f5f5;
+      border-radius: 16px;
+      padding: 1.8rem 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .faq-summary h4 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 0.8rem;
+      color: #1a1a1a;
+    }
+
+    .faq-summary details {
+      margin-bottom: 0.6rem;
+    }
+
+    .faq-summary summary {
+      cursor: pointer;
+      font-weight: 450;
+      color: #2e2e2e;
+      padding: 0.3rem 0;
+    }
+
+    .faq-summary summary::-webkit-details-marker {
+      color: #888;
+    }
+
+    .faq-summary p {
+      padding: 0.3rem 0 0.5rem 0.5rem;
+      color: #4a4a4a;
+      font-size: 0.95rem;
+    }
+
+    /* 页尾访问提示 */
+    .footer-note {
+      border-top: 1px solid #e0e0e0;
+      padding-top: 2rem;
+      margin-top: 1rem;
+      text-align: center;
+      font-size: 0.95rem;
+      color: #5a5a5a;
+    }
+
+    .footer-note a {
+      color: #1e1e1e;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: #b0b0b0;
+      font-weight: 450;
+    }
+
+    .footer-note a:hover {
+      text-decoration-color: #1e1e1e;
+    }
+
+    .footer-note .small {
+      font-size: 0.8rem;
+      color: #9a9a9a;
+      margin-top: 0.8rem;
+    }
+
+    /* 响应式细节 */
+    @media (max-width: 520px) {
+      .container {
+        padding: 1.5rem 1rem;
+      }
+
+      .hero h1 {
+        font-size: 2.1rem;
+      }
+
+      .background-card {
+        padding: 1.5rem 1.2rem;
+        border-radius: 14px;
+      }
+
+      .faq-summary {
+        padding: 1.2rem 1rem;
+      }
+
+      .info-item {
+        padding-left: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- hero 横幅 -->
+    <header class="hero">
+      <h1>爱游戏 · 索引</h1>
+      <div class="sub">一份围绕移动端游戏信息的整理与备注</div>
+    </header>
+
+    <!-- 背景说明 -->
+    <section class="background-card">
+      <h2>为什么整理这份笔记</h2>
+      <p>
+        在日常查阅移动游戏相关内容时，发现许多零散信息分散在不同页面。为了方便自己后续回溯，也为了让关注同一方向的朋友能更快找到参照，我陆续把一些基础条目、版本记录和功能说明汇总起来。<strong>爱游戏</strong> 作为其中一个比较完整的资料源，涵盖了不少实用的分类和更新日志。
+      </p>
+      <p>
+        这份页面并非官方文档，而是基于公开信息做的梳理归档。如果你也在寻找某一类游戏相关的基础资料，可以把它当作一个简单的出发点，再自行扩展查阅。
+      </p>
+    </section>
+
+    <!-- 三段自然介绍 -->
+    <div class="section-grid">
+      <div class="info-item">
+        <h3>收录范围说明</h3>
+        <p>主要覆盖移动端游戏的版本号、系统兼容性、常见配置参数等可验证信息。不包含攻略、评级或主观推荐。</p>
+        <div class="meta">范围：2023‑2025 年间公开资料</div>
+      </div>
+
+      <div class="info-item">
+        <h3>信息组织方式</h3>
+        <p>按功能模块和时间线交叉索引。每个条目尽量保留原始出处链接，方便核对。部分注释来源于社区讨论和官方公告。</p>
+        <div class="meta">格式：来源 + 摘要 + 链接</div>
+      </div>
+
+      <div class="info-item">
+        <h3>使用与反馈</h3>
+        <p>如果你发现条目有疏漏或需要补充某个具体方向，欢迎通过相应渠道提醒我。这份笔记保持不定期修订，以反映最新的公开情况。</p>
+        <div class="meta">更新：随公开信息变动</div>
+      </div>
+    </div>
+
+    <!-- FAQ 摘要 -->
+    <div class="faq-summary">
+      <h4>常见疑问摘要</h4>
+      <details>
+        <summary>这份笔记与官方有什么关系？</summary>
+        <p>没有任何官方或商业关联。纯粹是个人进行资料整理，所有内容均基于可查证的公开信息。</p>
+      </details>
+      <details>
+        <summary>我可以直接引用这里的条目吗？</summary>
+        <p>可以，但建议同时核对原始来源。整理过程中可能存在错漏，最好以官方或一手信息为准。</p>
+      </details>
+      <details>
+        <summary>如何获取更多背景信息？</summary>
+        <p>你可以访问 <a href="https://mobileofficial-igame.com">爱游戏</a> 查看原始页面，那里提供了更详尽的分类和版本历史。</p>
+      </details>
+    </div>
+
+    <!-- 页尾访问提示 -->
+    <footer class="footer-note">
+      <p>如果你需要查阅更完整的移动端游戏资料目录，可以从 <a href="https://mobileofficial-igame.com">爱游戏</a> 开始。那里保持了相对系统的更新习惯，适合作为进一步检索的起点。</p>
+      <p class="small">本页内容依据公开信息整理 · 仅作索引参考</p>
+    </footer>
+  </div>
+</body>
+</html>
